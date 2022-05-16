@@ -9,9 +9,10 @@ if __name__ == '__main__':
     sent = 2
     while sent > 0:
         try:
+            # Receive the message, check the tag first
             if system.verify(tag):
                 print(f'The tag is correct')
-                # Write file
+                # Write ciphertext down to compare length
                 with open('result.txt', 'wb') as fd:
                     fd.write(ciphertext)
             else:
